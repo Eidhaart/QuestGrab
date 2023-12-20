@@ -19,7 +19,8 @@ function App() {
 
   return (
     <div className="bg-dark-blue">
-      {isLoading ? <LoadingScreen /> : <HomeScreen />}
+      {isLoading ? <LoadingScreen /> : <div />}
+      <HomeScreen />
     </div>
   );
 }
