@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        "custom-gradient": "linear-gradient(135deg, #10273E, #091C2B)",
+      },
       width: {
         70: "70%", // Add 70% width
       },

@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import HomeScreen from "./components/HomeScreen";
 import LoadingScreen from "./components/LoadingScreen";
+import Background from "./components/Background";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,9 +20,10 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-dark-blue">
-      {isLoading ? <LoadingScreen /> : <div />}
-      <HomeScreen />
+    <div className="bg-dark-blue ease-in-out transition-all duration-75">
+      <NavBar />
+      {isLoading ? <LoadingScreen /> : <HomeScreen />}
+      <Background />
     </div>
   );
 }
