@@ -1,0 +1,156 @@
+.item {
+  @apply flex my-8 mx-3 w-12 rounded-full;
+  transition: all 200ms;
+}
+
+.item img {
+  transform: translateY(-2px);
+}
+
+.button {
+  @apply rounded-full  h-12 bg-center shadow-none;
+
+  transition: all 50ms;
+}
+
+.item:hover button {
+  @apply shadow-glow;
+  transition: all 200ms;
+}
+.item button {
+  transition: all 50ms;
+}
+.button.active {
+  transition: all 100ms;
+  @apply shadow-innerGlow;
+}
+.button.active:hover {
+  transition: all 50ms;
+  @apply shadow-innerGlow;
+}
+.item:hover {
+  transform: scale(1.02);
+  transition: all 200ms;
+}
+
+.filter-bar {
+  @apply flex flex-col h-screen  text-cream  items-center justify-center;
+
+  transform: translateX(-75px);
+  z-index: 0;
+  transition: all 200ms;
+}
+.filter-bar.active {
+  background-color: rgba(11, 12, 14, 0.7);
+  transform: translateX(0px);
+  z-index: 0;
+  transition: all 200ms;
+}
+
+.filter-button {
+  @apply fixed top-0 left-0 p-6 bg-opacity-50 text-cream text-xl my-3;
+  z-index: 999;
+  background-color: rgba(11, 12, 14, 0);
+  border-radius: 50%;
+  transition: all 200ms ease-in-out;
+  transition-delay: 50ms;
+  transform: rotate(360deg);
+}
+.filter-button.active {
+  z-index: 999;
+  background-color: rgba(11, 12, 14, 1);
+  transition: all 100ms ease-in-out;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0%;
+  border-top-left-radius: 0%;
+  transform: rotate(270deg);
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.quest-text {
+  color: none; /* Starting color */
+  opacity: 0; /* Start hidden */
+  font-family: "Garamond";
+  font-variant: small-caps;
+  font-weight: bolder;
+  transition: color 0.3s ease-in, opacity 0.3s ease-in; /* Transition both color and opacity */
+}
+
+.quest-text-active {
+  color: white; /* Active color */
+  opacity: 1; /* Fully visible */
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  max-width: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsOut 1s ease-in-out infinite;
+  filter: drop-shadow(0 0 1rem rgba(236, 139, 82, 0.75));
+}
+.loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1rem #ec8b52;
+  animation-name: pulsIn;
+}
+.loader:after {
+  width: calc(100% - 2rem);
+  padding-bottom: calc(100% - 2rem);
+  box-shadow: 0 0 0 0 #ec8b52;
+}
+
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #ec8b52;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    box-shadow: inset 0 0 0 0 #ec8b52;
+    opacity: 0;
+  }
+}
+
+@keyframes pulsOut {
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 #ec8b52;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1rem #ec8b52;
+    opacity: 1;
+  }
+}

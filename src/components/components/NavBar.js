@@ -1,16 +1,20 @@
 import React, { useState } from "react";
-import Icon from "../images/icon.png";
+import Icon from "../../images/icon.png";
+import home from "../../images/icons/home-icon.png";
+import leaderboard from "../../images/icons/leaderboard-icon.png";
+import settings from "../../images/icons/settings-icon.png";
+import shop from "../../images/icons/shop-icon.png";
 
-function NavBar() {
-  const [isSpecialActive, setIsSpecialActive] = useState(false);
+function NavBar({ onActiveItemChange }) {
   const [activeItem, setActiveItem] = useState("");
 
   const handleItemClick = (itemName) => {
     setActiveItem(itemName);
+    onActiveItemChange(itemName);
   };
 
   const handleSpecialItemClick = () => {
-    setActiveItem("special");
+    handleItemClick("special");
   };
 
   const list = document.querySelectorAll(".list");
@@ -30,7 +34,7 @@ function NavBar() {
           >
             <button>
               <span className="icon">
-                <ion-icon name="home"></ion-icon>
+                <img src={home} />
               </span>
               <span className="text">Home</span>
             </button>
@@ -41,7 +45,7 @@ function NavBar() {
           >
             <button>
               <span className="icon">
-                <ion-icon name="trophy"></ion-icon>
+                <img src={leaderboard} />
               </span>
               <span className="text">Leaderboard</span>
             </button>
@@ -60,7 +64,7 @@ function NavBar() {
           >
             <button>
               <span className="icon">
-                <ion-icon name="storefront"></ion-icon>
+                <img src={shop} />
               </span>
               <span className="text">Store</span>
             </button>
@@ -71,7 +75,7 @@ function NavBar() {
           >
             <button>
               <span className="icon">
-                <ion-icon name="settings"></ion-icon>
+                <img src={settings} />
               </span>
               <span className="text">Settings</span>
             </button>
@@ -87,11 +91,17 @@ function NavBar() {
         >
           <button>
             <span className="icon">
-              {/* <img src={Icon}></img> */}
               <div className="background-image"></div>
             </span>
-            <span className="text"></span>
           </button>
+          <p
+            className={`quest-text z-50 absolute -bottom-2 left-3 ${
+              activeItem === "special" ? "quest-text-active" : ""
+            }`}
+          >
+            quests
+          </p>
+          <p></p>
         </div>
       </div>
     </div>

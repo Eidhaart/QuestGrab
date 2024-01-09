@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Draconis";
+  src: local("Draconis"), url(../../fonts/Draconis.woff) format("woff");
+  font-style: normal;
+  font-weight: normal;
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: "Draconis";
+  src: local("Draconis Italic"),
+    url(../../fonts/DraconisItalic.woff) format("woff");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Draconis";
+  src: local("Draconis Bold"), url(../../fonts/DraconisBold.woff) format("woff");
+  font-style: normal;
+  font-weight: bold;
+}
+
+.tasks-container {
+  background-color: #11273e;
+  color: white;
+  font-family: "Garamond", serif;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+
+.task {
+  border: 2px solid #f3c88e;
+  margin: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.task:hover {
+  background-color: lighten(
+    #11273e,
+    10%
+  ); /* Adjust the percentage for desired lightness */
+  border-image: linear-gradient(to right, #f3c88e, #f3c88e) 1;
+}
+
+.daytime-indicator {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.task-details {
+  overflow: hidden;
+  max-height: 0;
+  padding: none !important;
+  margin: none !important;
+  transition: max-height 0.5s ease;
+}
+
+.task-details-expanded {
+  max-height: 500px; /* Adjust this value as needed */
+  transition: max-height 0.5s ease;
+}
+
+.task-fade-out {
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+}
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+input:focus {
+  color: black;
+  text-shadow: none;
+}
+textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: transparent;
+}
+
+textarea::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+textarea:focus {
+  color: black;
+  text-shadow: none;
+}

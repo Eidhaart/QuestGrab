@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "./firebase"; // Adjust the path as necessary
+import { db } from "../config/firebase"; // Adjust the path as necessary
 
 const Background = () => {
   return (
-    <div className="bg-dark-blue text-white min-w-full min-h-screen"></div>
+    <div>
+      <div className="image-background-alt w-screen h-screen overflow-hidden"></div>
+    </div>
   );
 };
 
