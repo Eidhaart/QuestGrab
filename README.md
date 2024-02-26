@@ -1,3 +1,5 @@
+![QuestGrab Banner]([https://imgur.com/a/kDqPz7Z](https://i.imgur.com/FGDItsm.png))
+
 # QuestGrab - Gamified Task Management 🚀
 
 Welcome to **QuestGrab**, the ultimate gamified task management application that transforms everyday chores and tasks into exciting quests. Designed for parents, team leaders, or individuals, **QuestGrab** aims to make organization not just simple, but also engaging and rewarding. With **QuestGrab**, turn daily chores into a game where every task completed earns rewards, fostering motivation and productivity.
