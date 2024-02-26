@@ -1,4 +1,4 @@
-![QuestGrab Banner]([https://imgur.com/a/kDqPz7Z](https://i.imgur.com/FGDItsm.png))
+![QuestGrab Banner](src/images/QG.png)
 
 # QuestGrab - Gamified Task Management 🚀
 
